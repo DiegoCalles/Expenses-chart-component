@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <title>Juan Calles | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="main-container">
+
+    <div class="balance">
+      <div class="balance__details">
+        <p class="balance__details-title">My balance</p>
+        <p class="balance__details-total">$921.48</p>
+      </div>    
+
+      <div class="balance__toggle">
+        <img class="balance__toggle-logo" src="./images/logo.svg" alt="balance toggle logo">
+      </div>
+    </div>
+
+    <div class="chart">
+        
+      <h2 class="chart__title">Spending - Last 7 days</h2>
+          
+      <div class="chart__bars-container">
+          <!-- inicio de la barra -->
+          <!-- vamos a hacer que se dibuje una sola barra de referencia. porque desde json los vamos extraer y desde js vamos a hacer que se dibuje el resto -->
+        <!-- <div class="chart__bar">
+          <div class="chart__bar--label">$35.20</div>
+          <div class="chart__bar--day">mon</div>
+        </div> -->
+
+        
+      </div>
+        <!-- fin de la barra -->
+      
+        
+      
+      <div class="chart__analitics">
+        <div>
+            <p class="chart__total">Total this month</p>
+            <p class="chart__total-value">$478.33</p>
+        </div>
+
+        <div class="chart__percentage" >
+            <p class="chart__percentage-number">+2.4%</p>
+            <p class="chart__percentage-period">from last month</p>
+        </div>
+      </div>
+    </div>
+  
+  </main>
+
+ 
+  
+  <footer class="attribution">
+    
+    Coded by <a href="#">Juan Calles</a>.
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

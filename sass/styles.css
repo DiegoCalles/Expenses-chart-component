@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(27deg, 66%, 92%);
+  font-size: 18px;
+}
+
+.main-container {
+  width: 344px;
+  margin: 68px auto;
+}
+@media (min-width: 600px) {
+  .main-container {
+    width: 540px;
+  }
+}
+
+.balance {
+  background-color: hsl(10deg, 79%, 65%);
+  height: 100px;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.balance__details {
+  color: hsl(27deg, 66%, 92%);
+}
+.balance__details-title {
+  font-size: 0.7em;
+  margin-bottom: 6px;
+}
+.balance__details-total {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+.balance__toggle-logo {
+  width: 60px;
+}
+@media (min-width: 600px) {
+  .balance {
+    height: 126px;
+  }
+  .balance__details-title {
+    font-size: 1em;
+    margin-bottom: 12px;
+  }
+  .balance__details-total {
+    font-size: 1.8em;
+  }
+  .balance__toggle-logo {
+    width: 75px;
+  }
+}
+
+.chart {
+  background-color: hsl(33deg, 100%, 98%);
+  height: 424px;
+  border-radius: 16px;
+  padding: 28px 20px;
+  color: hsl(28deg, 10%, 53%);
+}
+.chart__title {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+.chart__bars-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 220px;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+.chart__bar {
+  width: 32px;
+  background-color: hsl(10deg, 79%, 65%);
+  height: 200px;
+  border-radius: 4px;
+  position: relative;
+}
+.chart__bar--label {
+  background-color: hsl(25deg, 47%, 15%);
+  color: hsl(33deg, 100%, 98%);
+  width: 38px;
+  padding: 4px;
+  font-size: 0.5em;
+  border-radius: 4px;
+  font-weight: 700;
+  position: absolute;
+  top: -24px;
+  left: -4px;
+  display: none;
+}
+.chart__bar--day {
+  position: absolute;
+  bottom: -16px;
+  font-size: 0.6em;
+  width: 32px;
+  text-align: center;
+}
+.chart__bar:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+.chart__analitics {
+  border-top: 1px solid hsla(0deg, 1%, 79%, 0.896);
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  font-size: 0.7em;
+}
+.chart__total {
+  margin-bottom: 8px;
+}
+.chart__total-value {
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+  font-size: 1.4em;
+}
+.chart__percentage-number {
+  border: 1px solid red;
+  margin-top: 10px;
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+}/*# sourceMappingURL=styles.css.map */

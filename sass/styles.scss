@@ -1,0 +1,182 @@
+@use 'variables' as v;
+@use 'initial';
+
+// para asociar sass a css desde el cmd o git bash copio el comando  sass sass/styles.scss css/styles.css y se va a generar el fichero main.css dentro del dir css
+
+
+
+.main-container{
+    // border: 1px solid red;
+    width: 344px;
+    margin:68px auto;
+    // background-color: v.$Very_pale_orange;
+    @media (min-width:600px) {
+        width: 540px;
+    }
+
+}
+.balance{
+    background-color: v.$Soft_red; 
+    height: 100px;
+    border-radius: 16px;
+    padding: 24px 20px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    &__details{
+       color: v.$Cream;
+
+       &-title{
+        font-size: 0.7em;
+        margin-bottom: 6px;
+       }
+       &-total{
+        font-weight:700;
+        font-size: 1.4em;
+       }
+
+    }
+    &__toggle-logo{
+        width: 60px;
+    }
+    @media (min-width:600px) {
+        height: 126px;
+        &__details-title{
+            font-size: 1em;
+             margin-bottom: 12px;
+        }
+        &__details-total{
+            font-size: 1.8em;
+        }
+        &__toggle-logo{
+            width: 75px;
+        }
+    }
+    
+}
+
+.chart{
+    // border: 1px solid blue;
+    background-color: v.$Very_pale_orange;
+    height: 424px;
+    border-radius:16px ;
+    padding: 28px 20px;
+    color: v.$Medium_brown;
+
+    &__title{
+        color: v.$Dark_brown;
+        font-size: 1.25em;
+        margin-bottom:10px;
+    }
+
+    &__bars-container{
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 220px;
+        align-items: flex-end;
+        margin-bottom: 30px;
+        
+    }
+    &__bar{
+        width: 32px;
+        background-color: v.$Soft_red;
+        height: 200px;
+        border-radius: 4px;
+        position: relative; // para que el label lo tome como referencia siempre. si la barra es mas pequeña (en altura), el label siempre se mantendrá a la misma distancia
+        &--label{
+            background-color: v.$Dark_brown;
+            color: v.$Very_pale_orange;
+            width: 38px;
+            padding: 4px;
+            font-size: 0.5em;
+            border-radius: 4px;
+            font-weight: 700;
+            position: absolute;
+            top: -24px;
+            left: -4px  ;
+            display: none;
+        }
+        &--day{
+            // border: 1px solid red;
+            position: absolute;
+            bottom: -16px;
+            font-size: 0.6em;
+            width:32px ;
+            text-align: center;
+            
+        }
+        &:hover{
+            cursor: pointer;
+            filter: brightness(1.2);// para que sea mas claro. Así cuando cambie el color, tambien tendrá ese tono mas claro
+        }
+    }
+    &__analitics{
+        border-top: 2px solid v.$Cream;
+        display: flex;
+        justify-content: space-between;
+        padding: 24px;
+        font-size: 0.7em;        
+    }
+    &__total{
+        margin-bottom: 8px;
+    }
+    &__total-value{
+        color: v.$Dark_brown;
+        font-weight: 700;
+        font-size: 1.4em;
+    }
+      
+    
+    
+    &__percentage-number{
+        
+        margin-top: 18px;
+        color: v.$Dark_brown;
+        font-weight: 700;
+        text-align: end;
+    }
+    @media (min-width:600px) {
+        height: 512px;
+        padding: 44px;
+        &__title{
+            font-size: 2em;
+        }
+        &__bars-container{
+            margin-bottom: 50px;
+        }
+        &__bar{
+            width: 50px;
+            &--label{
+                width: 54px;
+                font-size: 0.7em;
+                top: -32px;
+                left: 2px;
+            }
+            &--day{
+                width: 54px;
+                bottom: -24px;
+                font-size: 0.8em; 
+            }
+        }
+        &__analitics{
+           padding-top:32px;
+           border-top: 3px solid v.$Cream;
+           font-size: 0.9em;
+        }       
+        &__total-value{
+             font-size: 2.4em;
+        }
+        &__percentage-number{
+            margin-top: 30px ;
+            
+        }
+    }
+    
+    
+    
+
+}
